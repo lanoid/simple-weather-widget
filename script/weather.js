@@ -8,7 +8,6 @@ var get_weather = function () {
     target,
     h,
     build_weather_module = function (weather) {
-      console.log(weather);
       var html = '';
       html += '<' + h + ' class="location">' + weather.name + '</' + h + '>';
       html += '<p class="temp">' + (parseInt(weather.main.temp, 10) - 273) + '°C</p>';
