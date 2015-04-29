@@ -1,9 +1,7 @@
 var get_weather = function(){
 
 	var apis = {
-		consumer_key : 'dj0yJmk9VldMbTY1MjhtTGFsJmQ9WVdrOWFrc3dTMmROTkdzbWNHbzlNalE1TlRJMU5UWXkmcz1jb25zdW1lcnNlY3JldCZ4PWE0',
-		geocode_uri : 'http://where.yahooapis.com/geocode?',
-		weather_uri : 'http://query.yahooapis.com/v1/public/yql?'
+		weather_uri : '//api.openweathermap.org/data/2.5/weather?'
 	};
 
 	var location = {};
@@ -19,7 +17,7 @@ var get_weather = function(){
 	var get_location = function(){
 		if("geolocation" in navigator){
 			navigator.geolocation.getCurrentPosition(function(position){
-				find_position(position);
+				find_weather(position);
 			});
 		} else {
 			console.log('Location not available.');
@@ -35,11 +33,13 @@ var get_weather = function(){
 		});
 	};
 
-	var find_weather = function(woeid){
-		var url = apis.weather_uri + 'q=select%20*%20from%20weather.forecast%20where%20woeid%3D'+ woeid +'%20and%20u%3D\'c\'&format=json';
-		$.getJSON(url).success(function(data){
-			weather = data.query.results.channel;
-			build_weather_module();
+	var find_weather = function(position){
+		var url = apis.weather_uri;
+		$.getJSON(url, {
+			lat : position.coords.latitude,
+			lon : position.coords.longitude,
+		}).success(function(data){
+			console.log(data);
 		});
 	};
 
