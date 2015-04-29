@@ -5,7 +5,6 @@ var get_weather = function () {
   var apis = {
       weather_uri : '//api.openweathermap.org/data/2.5/weather?'
     },
-    location = {},
     target,
     h,
     build_weather_module = function (weather) {
