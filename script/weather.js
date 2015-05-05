@@ -24,7 +24,7 @@ var get_weather = function () {
       });
     },
     get_location = function () {
-      if (navigator.hasOwnProperty('geolocation')) {
+      if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(function (position) {
           get_weather(position);
         });
