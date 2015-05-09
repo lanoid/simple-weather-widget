@@ -3,13 +3,17 @@
 <head>
 	<meta charset="utf-8" />
 	<script src="script/jquery.js" type="text/javascript"></script>
-	<script src="script/weather.js" type="text/javascript"></script>
+	<script src="script/min/weather-min.js" type="text/javascript"></script>
+
+	<link href="css/weather.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 <body>
 	<header>
 		<h1>Your Weather</h1>
 	</header>
-	<section id="weather"></section>
+	<section id="weather">
+		<h2 class="status">Fetching Weather…</h2>
+	</section>
 	<footer></footer>
 </body>
 <script type="text/javascript">

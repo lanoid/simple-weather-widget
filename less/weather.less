@@ -1,0 +1,32 @@
+@import '_lesshat.less';
+
+@import 'weather-icons/weather-icons.less';
+
+@import url(//fonts.googleapis.com/css?family=PT+Serif:400,700|Bevan);
+
+body {
+	font-size: 30px;
+	text-align: center;
+	h1 {
+		font-family: 'Bevan', serif;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-family: 'PT Serif', serif;
+		font-weight: 700;
+	}
+	p {
+		font-family: 'PT Serif', serif;
+		font-weight: 400;
+	}
+	i {
+		font-size: 4em;
+		text-shadow: 0 0 8px blue;
+	}
+}
+
+.keyframes(~'fader, 0% {opacity: 0} 50% {opacity: 1} 100% {opacity: 0}');
+
+.status {
+	.animation(fader 1s linear infinite);
+}
