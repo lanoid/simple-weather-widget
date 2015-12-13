@@ -1,0 +1,25 @@
+{
+  "name": "weather-widget",
+  "version": "1.0.0",
+  "description": "A simple weather widget using location and an open API",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.5",
+    "gulp-uglify": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanoid/simple-weather-widget.git"
+  },
+  "author": "lanoid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanoid/simple-weather-widget/issues"
+  },
+  "homepage": "https://github.com/lanoid/simple-weather-widget#readme"
+}
