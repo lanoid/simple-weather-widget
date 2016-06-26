@@ -3,7 +3,7 @@
 var get_weather = function () {
 
   var apis = {
-      weather_uri : '//api.openweathermap.org/data/2.5/weather?',
+      weather_uri : 'http://api.openweathermap.org/data/2.5/weather?',
       appid : 'cad3370b1bbe974e2dab04659aadd531'
     },
     target,
